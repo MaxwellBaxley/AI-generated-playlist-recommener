@@ -8,10 +8,15 @@ the 'target' data point refers to which playlist the song is found on. this is i
 input:
 the input of this NN is found in the .env file provided:
 CLIENT_ID= "" #client ID and client secret can be accessed through the spotify API
+
 CLIENT_SECRET = ""
+
 PLAYLIST_ID0 = "" #these are where you input the playlist IDs for the four playlists you want the NN to learn
+
 PLAYLIST_ID1 = "" #they can be found either through the API or by copying everything after the last '/' in the URL
+
 PLAYLIST_ID2 = "" 
+
 PLAYLIST_ID3 = "" 
 
 PLAYLIST_TEST = "" #this is where you put the ID for the playlist that you want it to predict
@@ -25,11 +30,17 @@ lets say your "test" playlist is 6 songs long:
        probability of that song being in playlist:
        
         playlist 0|playlist 1|playlist 2|playlist 3
+        
 song1 [[0.91398555 0.03893068 0.9498765  0.37815166]
+
  song2 [0.905545   0.13801654 0.85223573 0.2733887 ]
+ 
  song3 [0.6153971  0.68480366 0.3932283  0.41274834]
+ 
  song4 [0.7370439  0.15393828 0.80482304 0.45380738]
+ 
  song5 [0.73338205 0.30363542 0.6327116  0.39805007]
+ 
  song6 [0.6340241  0.5521786  0.23822287 0.47930247]]
  
  as you can see, for song 1, the NN 91.4% confident that it would fit the "vibe" of playlist 0, 3.9% confident for playlist 1, and so on.
